@@ -2,6 +2,10 @@ Cross-Platform file downloader for Dart and Flutter projects.
 
 [![pub package](https://img.shields.io/pub/v/download.svg)](https://pub.dartlang.org/packages/download)
 
+## Demo
+
+[Web Demo](https://xclud.github.io/dart_download/)
+
 ## Features
 
 Supports these platforms:
@@ -20,6 +24,13 @@ There are a few caveats about this package:
 
 ## Getting started
 
+In your `pubspec.yaml` file add:
+
+```dart
+dependencies:
+  download: any
+```
+Then, in your code import:
 ```dart
 import 'package:download/download.dart';
 ```
