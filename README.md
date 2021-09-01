@@ -1,5 +1,7 @@
 Cross-Platform file downloader for Dart and Flutter projects.
 
+[![pub package](https://img.shields.io/pub/v/download.svg)](https://pub.dartlang.org/packages/download)
+
 ## Features
 
 Supports these platforms:
@@ -10,7 +12,7 @@ Supports these platforms:
 - Web
 - Windows
 
-There are a few caveats about this function:
+There are a few caveats about this package:
 - On the web it caches the contents in a [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) and eventually saves the file in browser's default location.
 - On desktop it saves the file in absolute or relative path.
 - On mobile it saves the file in absolute or relative path, but we should ask/ensure if the app has the required permissions.
@@ -18,14 +20,11 @@ There are a few caveats about this function:
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
 ```dart
 import 'package:download/download.dart';
 ```
+
+## Usage
 
 ```dart
 final stream = Stream.fromIterable('Hello World!'.codeUnits);
