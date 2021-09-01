@@ -1,0 +1,14 @@
+name: download
+description: Cross-Platform file downloader for Dart and Flutter projects.
+version: 0.0.1
+homepage: https://pwa.ir
+repository: https://github.com/xclud/dart_download
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
+  test: ^1.17.12
+  lints: ^1.0.0
