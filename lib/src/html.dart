@@ -14,10 +14,10 @@ Future<void> download(Stream<int> stream, String filename) async {
   filename = filename.replaceAll('/', '_').replaceAll('\\', '_');
   final bytes = await stream.toList();
   // Encode our file in base64
-  final _base64 = base64Encode(bytes);
+  final b64 = base64Encode(bytes);
   // Create the link with the file
   final anchor =
-      AnchorElement(href: 'data:application/octet-stream;base64,$_base64')
+      AnchorElement(href: 'data:application/octet-stream;base64,$b64')
         ..target = 'blank';
   // add the name
   anchor.download = filename;
