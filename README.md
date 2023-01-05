@@ -17,6 +17,7 @@ Supports these platforms:
 - Windows
 
 There are a few caveats about this package:
+
 - On the web it caches the contents in a [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) and eventually saves the file in browser's default location.
 - On desktop it saves the file in absolute or relative path.
 - On mobile it saves the file in absolute or relative path, but we should ask/ensure if the app has the required permissions.
