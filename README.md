@@ -32,7 +32,9 @@ In your `pubspec.yaml` file add:
 dependencies:
   download: any
 ```
+
 Then, in your code import:
+
 ```dart
 import 'package:download/download.dart';
 ```
@@ -41,6 +43,16 @@ import 'package:download/download.dart';
 
 ```dart
 final stream = Stream.fromIterable('Hello World!'.codeUnits);
+download(stream, 'hello.txt');
+```
+
+or
+
+```dart
+import 'http/http.dart';
+const url = 'http://example.com';
+
+final stream = get(url);
 download(stream, 'hello.txt');
 ```
 
