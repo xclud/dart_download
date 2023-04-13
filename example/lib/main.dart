@@ -42,10 +42,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Download'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               'Click the FAB to download.',
             ),
