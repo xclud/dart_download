@@ -49,7 +49,7 @@ download(stream, 'hello.txt');
 or
 
 ```dart
-import 'http/http.dart';
+import 'package:http/http.dart';
 const url = 'http://example.com';
 
 final stream = get(url);
