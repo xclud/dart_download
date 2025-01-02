@@ -1,3 +1,7 @@
+## 1.0.1
+
+* `downloadUrl` and `downloadData` for web.
+
 ## 1.0.0
 
 * First version.
