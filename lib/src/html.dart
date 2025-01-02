@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'dart:html';
+import 'dart:typed_data';
 
 /// Downloads a file from a [stream] into the destination [filename].
 ///
@@ -26,4 +27,48 @@ Future<void> download(Stream<int> stream, String filename) async {
   document.body?.append(anchor);
   anchor.click();
   anchor.remove();
+}
+
+/// Downloads a file from a [url] into the destination [filename].
+Future<void> downloadUrl(String url, [String? filename]) {
+  if (filename == null || filename.isEmpty) {
+    final segments = Uri.parse(url).pathSegments;
+    if (segments.isNotEmpty) {
+      filename = segments.last;
+    } else {
+      filename = 'noname.bin';
+    }
+  }
+
+  // Create the link with the file
+  final anchor = AnchorElement(href: url)..target = 'blank';
+  ;
+  // add the name
+  anchor.download = filename;
+
+  // trigger download
+  document.body?.append(anchor);
+  anchor.click();
+  anchor.remove();
+
+  return Future.value();
+}
+
+/// Downloads a file from [data] into the destination [filename].
+Future<void> downloadData(Uint8List data, String filename) {
+  // Encode our file in base64
+  final b64 = base64Encode(data);
+  // Create the link with the file
+  final anchor =
+      AnchorElement(href: 'data:application/octet-stream;base64,$b64')
+        ..target = 'blank';
+  // add the name
+  anchor.download = filename;
+
+  // trigger download
+  document.body?.append(anchor);
+  anchor.click();
+  anchor.remove();
+
+  return Future.value();
 }

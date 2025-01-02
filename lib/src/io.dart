@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 
 /// Downloads a file from a [stream] into the destination [filename].
 ///
@@ -11,4 +12,14 @@ Future<void> download(Stream<int> stream, String filename) async {
   final bytes = await stream.toList();
   final file = File(filename);
   file.writeAsBytes(bytes);
+}
+
+/// Downloads a file from a [url] into the destination [filename].
+Future<void> downloadUrl(String url, [String? filename]) async {
+  throw Exception('Not implemented.');
+}
+
+/// Downloads a file from [data] into the destination [filename].
+Future<void> downloadData(Uint8List data, String filename) {
+  throw Exception('Not implemented.');
 }

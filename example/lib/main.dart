@@ -41,6 +41,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Download'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                downloadUrl('https://download.pwa.ir/favicon.png');
+              },
+              icon: const Icon(Icons.download))
+        ],
       ),
       body: const Center(
         child: Column(
